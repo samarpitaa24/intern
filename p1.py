@@ -6,26 +6,45 @@ Use if-else conditions to evaluate the student's grade based on their marks and 
 The program should continue to accept inputs until the user chooses to exit.'''
 
 student = {
-    "Raya" : { "age" : 20 , "marks" : 29} ,
-    "Riya" : { "age" : 20 , "marks" : 25} ,
-    "Rashi" : { "age" : 20 , "marks" : 24} ,
+    "Raya" : { "age" : 20 , "marks" : 15} ,
+    "Riya" : { "age" : 20 , "marks" : 20} ,
+    "Rashi" : { "age" : 20 , "marks" : 30} ,
 }
 
-
-stud_records = int(input("enter no. of students you want to insert records of : "))
-
-for i in range(0,stud_records+1) :
-    stud_name = input("enter name : ")
-    stud_age = int(input("enter age : "))
-    stud_marks = int(input("enter age : "))
-    student[stud_name] = {"age" : stud_age , "marks" : stud_marks}
-    print("record inserted")
-    
+#to insert record
+# records= int(input("enter no of records you want to insert : "))
+# for i in range(1, records+1):
+#     stud_name = input("enter name : ")
+#     stud_age = int(input("enter age : "))
+#     stud_marks = int(input("enter marks : "))
+#     student[stud_name] = {"age" : stud_age , "marks" : stud_marks}
+#     print("record inserted")
+# print(student.items())
+   
+#to update record 
 stud_update = input("enter the name of student who's record you want to update : ")
 update_what = input("update age or marks : ")
 
 if update_what == "age":
     new_age= int(input("enter age : "))
-    student.get(stud_update)
-    student.update( {"age" : new_age})
+    student.update( {stud_update : {"age" : new_age}}) #stud_update contains name of stud
     print("age updated")
+else :
+    new_marks = int(input("enter marks : "))
+    # rrr = student.get("age")
+    # student.update( {stud_update : {"age" :rrr  ,"marks" : new_marks}})
+    student.update( {stud_update : {"marks" : new_marks}})
+    print("marks updated")
+print(student.items())
+    
+#update grade in dict for each student
+
+# for x, y in student.items() :
+#     m= y.get("marks")
+#     if m in range(25,31):
+#         student.update({x : {"grade" : 'A'}}) 
+#     elif m in range (20,26):
+#          student.update({x : {"grade" : 'B'}}) 
+#     elif m in range (15,21):
+#          student.update({x : {"grade" : 'C'}}) 
+# print(student.items())

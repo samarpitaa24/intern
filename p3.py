@@ -14,14 +14,14 @@ users = {
 
 flag =1
 
-ID_ = int(input("enter id : "))
+
 print("operations : 1. Show balance \n2. Deposit \n3. Wthdrawl")
 
 
 while flag :
    
     op = int(input("enter operation no. : "))
-    
+    ID_ = int(input("enter id : "))
     
     if op == 1 :
         #show bal
@@ -38,20 +38,20 @@ while flag :
                 bal2 = y.get("balance")
                 dep = int(input("enter amt to be deposited : "))
                 new_bal2 = bal2 + dep 
-                # users.update({x:{"balance" : new_bal2}})
-                users[x] = {"balance" : new_bal2}
+                users.update({x:{"id" : d_id , "balance" : new_bal2}})
+                # users[x] = {"balance" : new_bal2}
         print(users)
     
-    elif  op ==3 :
+    elif  op == 3 :
         #for withdrawl
         for x,y in users.items() :
             ident = y.get("id")
             if ID_ == ident :
-                w_amt = int(input("enter withdrawl amt : "))
                 bal = y.get("balance")
+                w_amt = int(input("enter withdrawl amt : "))
                 if w_amt <=bal :
                     new_bal = bal-w_amt
-                    users.update({x : {"balance" : new_bal }})
+                    users.update({x : {"id" : ident,"balance" : new_bal }})
                 else :
                     print("balance insufficient")          
         print(users)
@@ -62,7 +62,7 @@ while flag :
     else :
         flag = 0    
     
-    
+    #issue occurs bcoz in every updation , the id is getting removed and only balance is left.
 
 # #for withdrawl
 # ID_ = int(input("enter id : "))
