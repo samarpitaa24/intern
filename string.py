@@ -1,3 +1,5 @@
+#immutable
+
 #string acts as an array hence slicing can be done
 print("hello" [2])
 
@@ -50,7 +52,7 @@ txt3 = "This will insert one \\ (backslash)." #=> This will insert one \ (backsl
 
 """
 swapcase()
-capitalize() => first letter capital
+capitalize() => first letter capital rest all are converted into lowercase
 casefold() => all lowercase
 
 center(no.) => centers string in space no. mentioned
@@ -75,30 +77,6 @@ expandtabs() => increase tabs size
 count()
 """
 
-#list methods
-
-"""
-append()	Adds an element at the end of the list
-clear()	Removes all the elements from the list
-copy()	Returns a copy of the list
-count()	Returns the number of elements with the specified value
-
-extend()	Add the elements of a list (or any iterable), to the end of the current list 
-fruits = ['apple', 'banana', 'cherry']
-cars = ['Ford', 'BMW', 'Volvo']
-fruits.extend(cars) 
-
-index()	Returns the index of the first element with the specified value 
-
-insert()	Adds an element at the specified position
-fruits.insert(1, "orange")
-
-pop(pos)	Removes the element at the specified position
-remove( element )	Removes the first item with the specified value
-
-reverse()	Reverses the order of the list    
-sort()	Sorts the list cars.sort(reverse=True) => sorts in desc
-"""
 
 #built in
 """ 
