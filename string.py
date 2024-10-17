@@ -130,3 +130,5 @@ filter()	Use a filter function to exclude items in an iterable object
 
 """
 
+a = "Hello I Am Samarpita"
+print(a.capitalize())
