@@ -12,32 +12,43 @@ No discount if the total price is below $50.'''
 prod = [] #initially cart empty
 
 #add items
-cost = 1000
-# m=int(input("enter no of items : "))
-# for i in range (m):
-#     n = input("enter item name: ")
-#     q = int(input("enter item quantity: "))
-#     c = int(input("enter item cost: "))
-#     p =(n , q, c)
-#     prod.append(p)
+cost = 0
+m=int(input("enter no of items : "))
+
+for i in range (m):
+    n = input("enter item name: ")
+    q = int(input("enter item quantity: "))
+    c = int(input("enter item cost: "))
+    p =(n , q, c)
+    prod.append(p)
     
-#     cost +=c
-# print(prod)
-# print("total cost of cart ", cost)
+    cost +=c
+    
+print() 
+print(prod)
+print() 
+
+print("total cost of cart ", cost)
 
 
-# #delete item
-# item = input("enter item name : ")
-# for i in prod : #i is tuple
-#     for j in i : #j is item in tuples
-#         if j == item :
-#            prod.remove(i)
-#            price = i[2]
-#            cost-=price
-#            print("now cart price is ", cost)
+print() #for newline to differentiate functionality
+#------------------------------------------------------------------------------
 
-# print(prod)
+
+#delete item
+item = input("enter item name to be deleted : ")
+for i in prod : #i is tuple
+    for j in i : #j is item in tuples
+        if j == item :
+           prod.remove(i)
+           price = i[2]
+           cost-=price
+           print("now cart price is ", cost)
+
+print(prod)
  
+print() #for newline to differentiate functionality
+#------------------------------------------------------------------------------
 
 #discount
 if cost >100:
@@ -49,4 +60,4 @@ elif 50<= cost <=100:
     cost-=dis
     print("cost after discount",cost)
 elif cost<50:
-    print("no discount",cost)
+    print("no discount")

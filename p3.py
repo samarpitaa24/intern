@@ -38,9 +38,8 @@ while flag :
                 bal2 = y.get("balance")
                 dep = int(input("enter amt to be deposited : "))
                 new_bal2 = bal2 + dep 
-                users.update({x:{"id" : d_id , "balance" : new_bal2}})
-                # users[x] = {"balance" : new_bal2}
-        print(users)
+                users[x].update({"balance" : new_bal2})
+                print("id and updated balance are : ",users[x].values())
     
     elif  op == 3 :
         #for withdrawl
@@ -51,10 +50,11 @@ while flag :
                 w_amt = int(input("enter withdrawl amt : "))
                 if w_amt <=bal :
                     new_bal = bal-w_amt
-                    users.update({x : {"id" : ident,"balance" : new_bal }})
+                    users[x].update( {"balance" : new_bal })
+                    print("id and updated balance are : ",users[x].values())
                 else :
                     print("balance insufficient")          
-        print(users)
+        
 
     cont = input("do you wanna continue : ")
     if cont == 'y' or cont == 'Y' :
