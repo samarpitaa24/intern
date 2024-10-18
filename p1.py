@@ -27,7 +27,7 @@ update_what = input("update age or marks : ")
 
 if update_what == "age":
     new_age= int(input("enter age : "))
-    student.update( {stud_update : {"age" : new_age}}) #stud_update contains name of stud
+    student["Raya"].update( {"age" : new_age}) #stud_update contains name of stud
     print("age updated")
 else :
     new_marks = int(input("enter marks : "))

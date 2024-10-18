@@ -110,3 +110,8 @@ filter()	Use a filter function to exclude items in an iterable object
 
 a = "Hello I Am Samarpita"
 print(a.capitalize())
+
+txt = f"My name is John, I am {5+2}"
+print(txt)
+
+#use it w input, input directly name , surname, city , etc 
