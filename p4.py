@@ -51,8 +51,8 @@ def display() :
         
 #search books
 def search_book():
+    search_book = input("enter book name or author name : ")
     for x,y in library.items():
-        search_book = input("enter book name or author name : ")
         book_name = y.get("title")
         auth_name = y.get("author")
         if (search_book == book_name) or (search_book == auth_name) :
@@ -72,9 +72,9 @@ while flag :
         borrow()
     elif  op == 3 :
         return_book()
-    elif  op == 3 :
-        display()
     elif  op == 4 :
+        display()
+    elif  op == 5 :
         search_book()
 
     cont = input("do you wanna continue : ")
