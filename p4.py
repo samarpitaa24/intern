@@ -1,3 +1,15 @@
+"""Problem 1: Library Management System
+
+Create a program to manage a small library's book collection. The program should:
+Store book details (title, author, year, availability status) in a dictionary.
+Implement functions to:
+Add new books.
+Update book availability when a book is borrowed or returned.
+Display all available books using a for loop.
+
+Use a while loop to continue accepting user input for various operations like adding or borrowing books.
+Provide an option to search for books by title or author."""
+
 library = { "book1 " : {"title" : "Limitless" , "author" : "Jim Kwik" ,"year" : 1960, "status" :"avail"},
            "book2 " : {"title" : "Death on the Nile" , "author" : "Agatha Christie" ,"year" : 1970,"status" :"avail"},
            "book3 " : {"title" : "Murder on the orient express" , "author" : "Agatha Christie" ,"year" : 1980, "status" :"avail"}
@@ -46,4 +58,28 @@ def search_book():
         if (search_book == book_name) or (search_book == auth_name) :
             print(library[x].values())
             
-search_book()
+
+
+flag =1
+print("operations : 1. Add books \n2. Borrow book \n3. Return books \n4. Display books \n5.Search book")
+while flag :
+   
+    op = int(input("enter operation no. : "))
+    
+    if op == 1 :
+        add_book()
+    elif op == 2 : 
+        borrow()
+    elif  op == 3 :
+        return_book()
+    elif  op == 3 :
+        display()
+    elif  op == 4 :
+        search_book()
+
+    cont = input("do you wanna continue : ")
+    if cont == 'y' or cont == 'Y' :
+        flag = 1
+    else :
+        flag = 0    
+    
