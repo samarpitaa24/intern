@@ -33,9 +33,13 @@ def borrow():
     for x,y in library.items() :
        title =  y.get("title")
        if which_book == title :
-           library[x].update({"status": "not avail"})
-           print(library[x].items())
-           
+           status = y.get("status")
+           if status == "avail" :           
+               library[x].update({"status": "not avail"})
+               print(library[x].items())
+           else :
+               print("book not available")
+               
 def return_book():
     which_book = input("enter the book name : ")
     for x,y in library.items() :
