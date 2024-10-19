@@ -1,4 +1,4 @@
-import classes 
+import intern.notes.classes as classes 
 
 n = int(input("enter the number to reverse : "))
 my_num = classes.Number(n)
